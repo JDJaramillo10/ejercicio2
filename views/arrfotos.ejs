@@ -9,6 +9,7 @@
                 <th>Título</th>
                 <th>Descripción</th>
                 <th>Ruta</th>
+                <th>Etiquetas</th>
                 <th>Fecha de creación</th>
             </tr>
         </thead>
@@ -27,6 +28,15 @@
                     <td>
                         <%= foto.ruta %>
                     </td>
+                    
+                    <td>
+                        
+                        <% foto.etiqueta.forEach(etiqueta => { %>
+                            <%= etiqueta.texto %> ,
+                        <% }) %>
+                        
+                    </td>
+                    
                     <td>
                         <%= foto.createdAt.toLocaleDateString('en-US') %>
                     </td>
